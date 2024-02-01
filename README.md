@@ -1,5 +1,5 @@
 30-Days-of-Node.js
-image
+
 
 The Challenge: 30 Days of Node.js Dive into the world of Node.js by upskilling with our FREE Scaler Topics course!
 
