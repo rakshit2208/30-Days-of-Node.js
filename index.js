@@ -1,17 +1,16 @@
-const fs = require("fs");
+const fs = require('fs');
 
-function readFileContent(filePath) {
-  fs.readFile(filePath, "utf8", (err, data) => {
-    if (err) {
-      console.error(`Error reading file: ${err.message}`);
-      return;
-    }
+function writeToFile(filePath, content){
+    fs.writeFile(filePath,content,(err)=>{
+        if(err)
+        {
+            console.log(err);
 
-    console.log("File content:");
-    console.log(data);
-  });
+        }else{
+            console.log('Data Written to Output.txt');
+        }
+    })
 }
 
-readFileContent('test-files/file1.txt');
-readFileContent('test-files/empty-file.txt');
-readFileContent('test-files/nonexistent-file.txt');
+writeToFile('test-files/output1.txt', 'Sample content.');
+writeToFile('test-files/nonexistent-folder/output.txt', 'Content in a non-existent folder.');
